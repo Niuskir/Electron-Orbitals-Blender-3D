@@ -11,13 +11,17 @@ Values for n, l, m, isolevel, number of contours can be changed in the script fo
 
 You will need NUMPY, which comes standard with Blender, and SYMPY which you must install separately in the following Blender folder:
 C:\Program Files\Blender Foundation\Blender\2.78\python\lib\site-packages
-SYMPY is dependent on one or two additional Python extensions but you will get a message on which ones in the Blender console when you run the script. The easiest way i know about to get SYMPY and it's dependents is to install the Anaconda3 environment (https://docs.continuum.io/) and copy the SYMPY + it's dependents from C:\Anaconda3\Lib\site-packages to the Blender site packages folder specifies above.
+SYMPY is dependent on one or two additional Python extensions but you will get a message on which ones in the Blender console when you run the script. The easiest way i found to get SYMPY and it's dependents is to install the Anaconda3 environment (https://docs.continuum.io/) and copy the SYMPY + it's dependents from C:\Anaconda3\Lib\site-packages to the Blender site packages folder specified above.
 
 The sw versions i ran this script with are: Blender 2.78c, NUMPY 14.1 SYMPY 1.0
 
-The script calculates the orbital cloud(s) using the proper scientific formulas and then uses the Marching Cubes computer graphics algoritm to visualize the electron orbitals of the Hydrogen Atom in various isosurfaces.
-This is my first Python script so am sure it there are many proper and faster ways to get things done for the parts i have written. The script is completed in the sense that it generates the orbital in a mesh (used Blender 2.78) and you can play around changing n.l.m, # of countours & isolevel. Rendering shows you the various probabilty isosurfaces going inwards.
+The script calculates the orbital cloud(s) using the proper scientific formulas and then uses the Marching Cubes computer graphics algoritm to visualize the electron orbitals at various isosurfaces (probability levels).
+I am not an experienced Python developer script so am sure it there are many proper and faster ways to get things done. The script is complete in the sense that it generates the orbital in a mesh object in Blender 3D and you can play around changing n.l.m, # of countours & isolevel. Rendering (Cycles) shows you the various probabilty isosurfaces going into the cloud(s) due to a simple Transparency material.
+
 This is a hobby project and done just for the fun of it.
-If you are interested is this kind of stuff with Blender this can help you started and with Blender the sky is the limit.
+
+If you are interested is this kind of stuff with Blender this can help you started and if you know Blender well the sky is the limit in tems of what you can do withthe mesh/object.
+
 Hope this is of value to someone.
-08/30/17 I have added another script BlenderHydrogenOrbitalVisualization.py which creates a coud of verticies instead of a mesh for you to play with.
+
+I have added another script BlenderHydrogenOrbitalVisualization.py which creates a coud of verticies instead of a mesh. This requires still some work to get something viewable.
