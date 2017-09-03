@@ -1,7 +1,7 @@
 # Electron-Orbitals-Blender-3D
 Electron Orbital Visualization (probability clouds) generated in Blender 3D
 
-Included a Blender Python script which calculates probabilty cloud isosurfaces and generates the corresponding meshes at various probabilty levels (isolevels). Various orbitals can be generated based on in the script settable combinations of n, l & m + number of contours + mesh resolution.
+Included a Python script (Electron_Orbitals_v4) in Blender (Electron_Orbitals_v4.blend) which calculates a defined number of probabilty cloud isosurfaces and generates the corresponding meshes at various probabilty levels (isolevels). Various meshes of orbitals + corresonding probability levels can be generated based on in the script settable combinations of n, l & m + number of contours + mesh resolution.
 
 I have created this pyhton script by combining great work which can be found here: https://github.com/damontallen/Orbitals/blob/master/Hydrogen%20Orbitals%20(Feb%2018,%202014)%20(dynamic%20entry).ipynb and here: https://github.com/mutantbob/blender-marching-cubes
 
@@ -24,4 +24,4 @@ If you are interested is this kind of stuff with Blender this can help you start
 
 Hope this is of value to someone.
 
-I have added another script BlenderHydrogenOrbitalVisualization.py which creates a coud of verticies instead of a mesh. This requires still some work to get something viewable.
+I have added another script Electron_Orbitals_v1.py which creates a coud of verticies instead of a mesh. This requires still some work to get something viewable.
