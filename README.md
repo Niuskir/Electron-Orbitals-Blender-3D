@@ -22,9 +22,9 @@ SYMPY is dependent on one or two additional Python extensions but you will get a
 The sw versions i ran this script with are: Blender 2.78c, NUMPY 14.1 SYMPY 1.0
 
 The script calculates the orbital cloud(s) using the proper scientific formulas and then uses the Marching Cubes computer graphics algoritm to visualize the electron orbitals at various isosurfaces (probability levels).
-I am not an experienced Python developer script so am sure it there are many proper and faster ways to get things done. The script is complete in the sense that it generates the orbital in a mesh object in Blender 3D and you can play around changing n.l.m, # of contours & isolevel. Rendering (Cycles) shows you the various probability isosurfaces going into the cloud(s) due to a simple Transparency material.
+I am not an experienced Python developer and not a scientist so am sure it there are many proper and faster ways to get things done. The script is complete in the sense that it generates the orbital in a mesh object in Blender 3D and you can play around changing n.l.m, # of contours & isolevel. Rendering (Cycles) shows you the various probability isosurfaces going into the cloud(s) due to a simple Transparency material.
 
-This is a hobby project and done just for the fun of it.
+This is a hobby project and was done just for the fun of it.
 
 If you are interested is this kind of stuff with Blender this can help you started and if you know Blender well the sky is the limit in tems of what you can do withthe mesh/object.
 
