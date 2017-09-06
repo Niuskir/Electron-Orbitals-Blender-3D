@@ -1,3 +1,4 @@
+
 i# Electron-Orbitals-Blender-3D
 Electron Orbital Visualization (probability clouds) generated in Blender 3D
 
@@ -31,3 +32,6 @@ If you are interested is this kind of stuff with Blender this can help you start
 Hope this is of value to someone.
 
 I have added another script Electron_Orbitals_v1.py which creates a coud of verticies instead of a mesh. This requires still some work to get something viewable.
+
+Youtube video of some generated orbitals: 
+https://www.youtube.com/watch?v=v__meVOtgjY
