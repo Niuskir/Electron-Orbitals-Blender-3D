@@ -42,4 +42,4 @@ If you are interested is this kind of stuff using Blender, this can help you get
 Hope this is of value to someone.
 
 Youtube video of some generated orbitals: 
-https://www.youtube.com/watch?v=v__meVOtgjY
+https://youtu.be/ir7imCX-Ulw
