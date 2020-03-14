@@ -17,24 +17,29 @@ This Python script is not an add-on and must be run from within the Blender text
 Values for n, l, m, isolevel, number of contours can be changed in the script for various electron probabilty isosurfaces.
 
 If the variable what = 'single' only one Blender object will be created based on the n, l & m values in lines 738. 740 & 743.
-If variable what <>
+If variable what is unequal to 'single' multiple Blender objects will be created based on the all combinations of the values of n, l & m as defined in the "for" loops in lines 749, 753 and 756.
 
-You will need NUMPY, which comes standard with Blender, and SYMPY which you must install separately in the following Blender folder:
-C:\Program Files\Blender Foundation\Blender\2.78\python\lib\site-packages
-SYMPY is dependent on one or two additional Python extensions but you will get a message on which ones are missing in the Blender console when you run the script. The easiest way i found to get SYMPY and it's dependents is to install the Anaconda3 environment (https://docs.continuum.io/) and copy the SYMPY + it's dependents from C:\Anaconda3\Lib\site-packages to the Blender site packages folder specified above.
+The number of contours (isolevel surfaces) is defined in line 726 in the variable n_o_c. The progressive "see-trough" capability of a Blender object with multiple isosurfaces (to show the probability electron "cloud") can be created using a Blender material which defines transparency. There are many videos on Youtube showing how to create such a transparent material in Blender. 
 
-The sw versions i ran this script with are: Blender 2.78c, NUMPY 14.1 SYMPY 1.0
+Each Blender object generated will be placed in the correct location in 3D space as defined by the n, l & m grid contained in the blend file.   
+
+The script requires the Python modules sympy and mpmath to be installed in the following Blender folder (they do not come standard in Blender):
+C:\Program Files\Blender Foundation\Blender 2.82\2.82\python\lib\site-packages
+
+Sympy can be downloaded here: https://www.sympy.org/en/index.html
+Mpmath can be downloaded here: http://mpmath.org/
+
+The sw versions i ran this script with are: Blender 2.82a, sympy 1.5.1 and mpmath 1.1.0. This script ran without problems in the Blender 2.83 Alpha version (as of 03/14/20) as well (don't forget to add sympy and mpmath).   
 
 The script calculates the orbital cloud(s) using the proper scientific formulas and then uses the Marching Cubes computer graphics algoritm to visualize the electron orbitals at various isosurfaces (probability levels).
-I am not an experienced Python developer and not a scientist so am sure it there are many proper and faster ways to get things done. The script is complete in the sense that it generates the orbital in a mesh object in Blender 3D and you can play around changing n.l.m, # of contours & isolevel. Rendering (Cycles) shows you the various probability isosurfaces going into the cloud(s) due to a simple Transparency material.
+
+I am not an experienced Python developer and not a scientist so am sure there are better and proper and faster ways to get things done. The script is complete in the sense that it generates single or multiple orbital(s) in a mesh object in Blender and you can play around changing n.l.m, # of contours & isolevel. Rendering can be done in EEVEE or Cycles..
 
 This is a hobby project and was done just for the fun of it.
 
-If you are interested is this kind of stuff with Blender this can help you started and if you know Blender well the sky is the limit in tems of what you can do withthe mesh/object.
+If you are interested is this kind of stuff using Blender, this can help you get started and if you know Blender, or want to learn Blender, the full capability of this software is available. 
 
 Hope this is of value to someone.
-
-I have added another script Electron_Orbitals_v1.py which creates a coud of verticies instead of a mesh. This requires still some work to get something viewable.
 
 Youtube video of some generated orbitals: 
 https://www.youtube.com/watch?v=v__meVOtgjY
