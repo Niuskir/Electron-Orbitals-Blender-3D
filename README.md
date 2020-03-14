@@ -1,20 +1,23 @@
-
-i# Electron-Orbitals-Blender-3D
 Electron Orbital Visualization (probability clouds) generated in Blender 3D
 
-Included a Python script (Electron_Orbitals_v4) in Blender (Electron_Orbitals_v4.blend) which calculates a defined number of probability cloud iso surfaces and generates the corresponding meshes. Diffent configurations of orbitals + corresonding probability levels can be generated based combinations of n, l & m + number of contours + mesh resolution.
+Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing and game creation:https://www.blender.org/
 
-I have created this pyhton script by combining great work which can be found here: 
+The blend file above, which as-is can be directly loaded into Blender 2.82a, includes a Python script which calculates a defined number of probability cloud iso surfaces and generates the corresponding meshes. Diffent configurations of orbitals + corresonding probability levels can be generated based combinations of n, l & m + number of contours + mesh resolution.
+
+The Python script uses Hydrogen atom wavefunctions to provide visualizations of the quantum equations of the atomic orbitals and is based on the great work done by Damon Allen Ph.D., Nick Polfer Ph.D., Corey Stedwell Ph.D and Nathan Roehr Ph.D. which can be found here: 
 
 https://github.com/damontallen/Orbitals/blob/master/Hydrogen%20Orbitals%20(Feb%2018,%202014)%20(dynamic%20entry).ipynb 
 
-and here: 
+and for the Marching Cubes solution to generate the iso meashes on Blender i used the great work done by Robert Forsman, Tom Sapiens and Paul Bourke which can be found here:
 
 https://github.com/mutantbob/blender-marching-cubes
 
-This Python script is not an add-on and must be run from the Blender text editor.
+This Python script is not an add-on and must be run from within the Blender text editor.
 
 Values for n, l, m, isolevel, number of contours can be changed in the script for various electron probabilty isosurfaces.
+
+If the variable what = 'single' only one Blender object will be created based on the n, l & m values in lines 738. 740 & 743.
+If variable what <>
 
 You will need NUMPY, which comes standard with Blender, and SYMPY which you must install separately in the following Blender folder:
 C:\Program Files\Blender Foundation\Blender\2.78\python\lib\site-packages
