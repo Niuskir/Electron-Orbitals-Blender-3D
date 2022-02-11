@@ -18,7 +18,7 @@ from sympy import factorial as fac
 from sympy.functions import Abs,sqrt,exp,cos,sin
 from sympy import re, im, simplify
 import warnings # in order to suppress divide_by_zero warnings...
-
+from os import system
 #display the latex representation of a symbolic variable by default.
 from sympy import init_printing 
 init_printing(use_unicode=True)
@@ -713,6 +713,20 @@ layer_collection = bpy.context.view_layer.layer_collection
 layerColl = recurLayerCollection(layer_collection, 'Orbitals')
 bpy.context.view_layer.active_layer_collection = layerColl
 
+cls = lambda: system('cls')
+cls() #this function call will clear the System Console
+
+bpy.context.scene.cursor.location = (0,0,0) #put curser in world center
+bpy.context.scene.cursor.rotation_euler = (0,0,0) #put curser in world center
+
+if bpy.context.mode!='OBJECT': # if not in OBJECT mode, set OBJECT mode
+    bpy.ops.object.mode_set(mode='OBJECT')
+bpy.ops.object.select_all(action='DESELECT') 
+
+for obj in bpy.data.objects: #unhide all hidden objects
+   obj.hide_set(False)
+   obj.hide_viewport = False
+
 #Delete previous generated Blender MESH objects
 bpy.ops.object.select_all(action='DESELECT')
 for ob in bpy.context.scene.objects:
@@ -729,7 +743,7 @@ isostep = 0.1
 
 
 #if what is 'single' only one n,l & m blender object will be created, if it is anything else multiple blender objects for n,l,m will be created
-what='single'
+what=''
 
 if what == 'single':
     #Single n,l,m blender object will be created
@@ -746,7 +760,7 @@ else:
     #multiple n,l,m blender objects will be created
     
     #n is  the principle quantum number and relates to the period the element is in, or the shell.
-    for n in range(1,8):
+    for n in range(3,4):
      
         #l is the angular momentum quantum number which defines the sub shell s, p, d, f, of which there are 
         #n subshells whose values are 0 <= l <= (n-1)
