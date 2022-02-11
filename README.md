@@ -16,8 +16,8 @@ This Python script is not an add-on and must be run from within the Blender text
 
 Values for n, l, m, isolevel, number of contours can be changed in the script for various electron probabilty isosurfaces.
 
-If the variable what = 'single' only one Blender object will be created based on the n, l & m values in lines 738. 740 & 743.
-If variable what is unequal to 'single' multiple Blender objects will be created based on the all combinations of the values of n, l & m as defined in the "for" loops in lines 749, 753 and 756.
+If the variable what in line 746 is 'single' only one Blender object will be created based on the n, l & m values in lines 752, 755 & 757.
+If variable "what" is unequal to 'single', multiple Blender objects will be created based on the all combinations of the values of n, l & m as defined in the "for" loops in lines 763, 767 and 770. Please note that if you run for example "for n in range(1,8)" it will take hours (depending on your PC computing power) to generate all the combinations of probability clouds in Blender objects. 
 
 The number of contours (isolevel surfaces) is defined in line 726 in the variable n_o_c. The progressive "see-trough" capability of a Blender object with multiple isosurfaces (to show the probability electron "cloud") can be created using a Blender material which defines transparency. There are many videos on Youtube showing how to create such a transparent material in Blender. 
 
