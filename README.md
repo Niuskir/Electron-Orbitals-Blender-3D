@@ -51,3 +51,6 @@ Hope this is of value to someone.
 
 Youtube video of some generated orbitals: 
 https://youtu.be/ir7imCX-Ulw
+*****************************************
+Update: i have created an extension which you can install in Blender 4.2 and later. It contains wheels for sympy and mpmath so you don't have to worry about installing these extra python modules. Download zip file "Hydrogen_electron_orbitals_extension.zip" and install the extension using the "Install from Disk" option in "Get Extensions" in the Preferences (Edit > preferences).
+*****************************************
